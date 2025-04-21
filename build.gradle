@@ -6,18 +6,17 @@ plugins {
 version = '1.0.0'
 group = 'app.qurancorpus'
 
+
+
 repositories {
     mavenCentral()
 
     maven {
         name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/kaisdukes/memseqdb")
-        credentials {
-            username = 'kaisdukes'
-            password = System.getenv("GITHUB_TOKEN")
-        }
+        url = uri("./lib/")
     }
 }
+
 
 dependencies {
     annotationProcessor('io.micronaut:micronaut-http-validation')
